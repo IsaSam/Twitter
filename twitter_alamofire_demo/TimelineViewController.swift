@@ -17,7 +17,12 @@ class TimelineViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func onLogoutButton(_ sender: Any) {
+        // Copy this line once you've made the outlet
+        APIManager.shared.logout()
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
