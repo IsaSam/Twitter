@@ -10,8 +10,12 @@ import UIKit
 
 class User: NSObject {
     var name: String?
+    var screenName: String?
+    static var current: User?
     
     init(dictionary: [String : Any]) {
         super.init()
+        name = dictionary["name"] as? String
+        screenName = dictionary["screen_name"] as? String
     }
 }
