@@ -87,7 +87,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="tweetTextLabel" destination="epC-Fs-Q5Z" id="ZLP-IG-Wsf"/>
+                                            <outlet property="tweetTextLabel" destination="epC-Fs-Q5Z" id="gQM-0E-eej"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
