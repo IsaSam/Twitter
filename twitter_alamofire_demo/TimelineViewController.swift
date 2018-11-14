@@ -17,8 +17,8 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
 
         tableView.dataSource = self
-        //tableView.rowHeight = 160
-        //tableView.estimatedRowHeight = 200
+        tableView.rowHeight = 180
+        tableView.estimatedRowHeight = 200
         fetchTweets()
     }
     @IBAction func onLogoutButton(_ sender: Any) {

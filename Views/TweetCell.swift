@@ -7,15 +7,30 @@
 //
 
 import UIKit
+import Alamofire
+import KeychainAccess
+import OAuthSwiftAlamofire
+import OAuthSwift
+///import AlamofireImage
 
 class TweetCell: UITableViewCell {
     
     @IBOutlet weak var tweetTextLabel: UILabel!
+    @IBOutlet weak var profileNameLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var timestampLabel: UILabel!
     
+    
+    var profileUrl: NSURL?
     private var TimelineViewController: UIViewController!
     var tweet: Tweet! {
         didSet{
             tweetTextLabel.text = tweet.text
+            profileNameLabel.text = tweet.user?.name
+            usernameLabel.text = tweet.user?.screenName
+            
+            
         }
         
     }
