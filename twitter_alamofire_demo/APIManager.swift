@@ -34,6 +34,7 @@ class APIManager: SessionManager {
             // Save Oauth tokens
             self.save(credential: credential)
             
+            
             self.getCurrentAccount(completion: { (user, error) in
                 if let error = error {
                     failure(error)
@@ -41,7 +42,7 @@ class APIManager: SessionManager {
                     print("Welcome \(String(describing: user.name))")
                     
                     // MARK: TODO: set User.current, so that it's persisted
-                    
+                    User.current = user
                     success()
                 }
             })
