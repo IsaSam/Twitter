@@ -29,8 +29,9 @@ class TweetCell: UITableViewCell {
         didSet{
             tweetTextLabel.text = tweet.text
             profileNameLabel.text = tweet.user?.name
-            usernameLabel.text = tweet.user?.screenName
+            usernameLabel.text = "@" + (tweet.user?.screenName as! String)
             profileImageView.af_setImage(withURL: tweet.user?.profileUrl! as! URL)
+            timestampLabel.text = tweet.timeElapsed()
             
         }
         

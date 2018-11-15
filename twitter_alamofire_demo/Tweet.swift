@@ -18,6 +18,7 @@ class Tweet: NSObject {
     var retweetCount: Int? // Update favorite count label
     var retweeted: Bool? // Configure retweet button
     var user: User? // Author of the Tweet
+    var createDate: NSDate?
     var createdAtString: String? // String representation of date posted
     var profileURL: User?
     
@@ -51,7 +52,25 @@ class Tweet: NSObject {
         // initialize user
         let user = dictionary["user"] as! [String: Any]
         self.user = User(dictionary: user)
-        
+        let timeStampString = dictionary["created_at"] as? String
+        if let timeStampString = timeStampString {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "EE MM d HH:mm:ss Z y"
+            createDate = formatter.date(from: timeStampString) as! NSDate
+        }
+
+        }
+    func timeElapsed() -> String {
+        let timeElapsedInSeconds = createDate?.timeIntervalSinceNow
+        let time = abs(NSInteger(timeElapsedInSeconds!))
+        if (time > 24 * 60 * 24) {
+            return String(time / (24 * 60 * 24)) + "d"
+        } else if (time > 60 * 60) {
+            return String(time / (60 * 60)) + "h"
+        } else {
+            return String(time / 60) + "m"
+        }
+       /*
         // Format createdAt date string
         let createdAtOriginalString = dictionary["created_at"] as! String
         let formatter = DateFormatter()
@@ -64,7 +83,9 @@ class Tweet: NSObject {
         formatter.timeStyle = .none
         // Convert Date to String and set the createdAtString property
         createdAtString = formatter.string(from: date)
+         */
     }
+    
     static func tweets(with array: [[String: Any]]) -> [Tweet] {
         var tweets: [Tweet] = []
         for tweetDictionary in array {
