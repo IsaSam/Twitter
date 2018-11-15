@@ -54,16 +54,16 @@
 		BE4D1BB72168078300E21A30 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE4D1BB92168082300E21A30 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		BEBC8367211F4199003A5FE1 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
-		ED1AFD2D1E942B2500FD4B90 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1AFD2D1E942B2500FD4B90 /* twitter_alamofire_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitter_alamofire_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1AFD301E942B2500FD4B90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED1AFD351E942B2500FD4B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED1AFD371E942B2500FD4B90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED1AFD3A1E942B2500FD4B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED1AFD3C1E942B2500FD4B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED1AFD411E942B2500FD4B90 /* TwitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1AFD411E942B2500FD4B90 /* twitter_alamofire_demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twitter_alamofire_demoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1AFD451E942B2500FD4B90 /* twitter_alamofire_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitter_alamofire_demoTests.swift; sourceTree = "<group>"; };
 		ED1AFD471E942B2500FD4B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED1AFD4C1E942B2500FD4B90 /* TwitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1AFD4C1E942B2500FD4B90 /* twitter_alamofire_demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twitter_alamofire_demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1AFD501E942B2500FD4B90 /* twitter_alamofire_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitter_alamofire_demoUITests.swift; sourceTree = "<group>"; };
 		ED1AFD521E942B2500FD4B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1AFD5E1E94421000FD4B90 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -156,9 +156,9 @@
 		ED1AFD2E1E942B2500FD4B90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED1AFD2D1E942B2500FD4B90 /* Twitter.app */,
-				ED1AFD411E942B2500FD4B90 /* TwitterTests.xctest */,
-				ED1AFD4C1E942B2500FD4B90 /* TwitterUITests.xctest */,
+				ED1AFD2D1E942B2500FD4B90 /* twitter_alamofire_demo.app */,
+				ED1AFD411E942B2500FD4B90 /* twitter_alamofire_demoTests.xctest */,
+				ED1AFD4C1E942B2500FD4B90 /* twitter_alamofire_demoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,9 +217,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ED1AFD2C1E942B2500FD4B90 /* Twitter */ = {
+		ED1AFD2C1E942B2500FD4B90 /* twitter_alamofire_demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED1AFD551E942B2500FD4B90 /* Build configuration list for PBXNativeTarget "Twitter" */;
+			buildConfigurationList = ED1AFD551E942B2500FD4B90 /* Build configuration list for PBXNativeTarget "twitter_alamofire_demo" */;
 			buildPhases = (
 				5C4A3CEE1918456EBE336A5E /* [CP] Check Pods Manifest.lock */,
 				ED1AFD291E942B2500FD4B90 /* Sources */,
@@ -231,14 +231,14 @@
 			);
 			dependencies = (
 			);
-			name = Twitter;
+			name = twitter_alamofire_demo;
 			productName = twitter_alamofire_demo;
-			productReference = ED1AFD2D1E942B2500FD4B90 /* Twitter.app */;
+			productReference = ED1AFD2D1E942B2500FD4B90 /* twitter_alamofire_demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ED1AFD401E942B2500FD4B90 /* TwitterTests */ = {
+		ED1AFD401E942B2500FD4B90 /* twitter_alamofire_demoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED1AFD581E942B2500FD4B90 /* Build configuration list for PBXNativeTarget "TwitterTests" */;
+			buildConfigurationList = ED1AFD581E942B2500FD4B90 /* Build configuration list for PBXNativeTarget "twitter_alamofire_demoTests" */;
 			buildPhases = (
 				01C0654038116EE22955C0D0 /* [CP] Check Pods Manifest.lock */,
 				ED1AFD3D1E942B2500FD4B90 /* Sources */,
@@ -250,14 +250,14 @@
 			dependencies = (
 				ED1AFD431E942B2500FD4B90 /* PBXTargetDependency */,
 			);
-			name = TwitterTests;
+			name = twitter_alamofire_demoTests;
 			productName = twitter_alamofire_demoTests;
-			productReference = ED1AFD411E942B2500FD4B90 /* TwitterTests.xctest */;
+			productReference = ED1AFD411E942B2500FD4B90 /* twitter_alamofire_demoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		ED1AFD4B1E942B2500FD4B90 /* TwitterUITests */ = {
+		ED1AFD4B1E942B2500FD4B90 /* twitter_alamofire_demoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED1AFD5B1E942B2500FD4B90 /* Build configuration list for PBXNativeTarget "TwitterUITests" */;
+			buildConfigurationList = ED1AFD5B1E942B2500FD4B90 /* Build configuration list for PBXNativeTarget "twitter_alamofire_demoUITests" */;
 			buildPhases = (
 				7022D4CCEFBD1FE1F7645438 /* [CP] Check Pods Manifest.lock */,
 				ED1AFD481E942B2500FD4B90 /* Sources */,
@@ -269,9 +269,9 @@
 			dependencies = (
 				ED1AFD4E1E942B2500FD4B90 /* PBXTargetDependency */,
 			);
-			name = TwitterUITests;
+			name = twitter_alamofire_demoUITests;
 			productName = twitter_alamofire_demoUITests;
-			productReference = ED1AFD4C1E942B2500FD4B90 /* TwitterUITests.xctest */;
+			productReference = ED1AFD4C1E942B2500FD4B90 /* twitter_alamofire_demoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -307,7 +307,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED1AFD281E942B2500FD4B90 /* Build configuration list for PBXProject "Twitter" */;
+			buildConfigurationList = ED1AFD281E942B2500FD4B90 /* Build configuration list for PBXProject "twitter_alamofire_demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -320,9 +320,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ED1AFD2C1E942B2500FD4B90 /* Twitter */,
-				ED1AFD401E942B2500FD4B90 /* TwitterTests */,
-				ED1AFD4B1E942B2500FD4B90 /* TwitterUITests */,
+				ED1AFD2C1E942B2500FD4B90 /* twitter_alamofire_demo */,
+				ED1AFD401E942B2500FD4B90 /* twitter_alamofire_demoTests */,
+				ED1AFD4B1E942B2500FD4B90 /* twitter_alamofire_demoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -417,6 +417,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-twitter_alamofire_demo/Pods-twitter_alamofire_demo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/OAuthSwiftAlamofire/OAuthSwiftAlamofire.framework",
@@ -424,6 +425,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwiftAlamofire.framework",
@@ -471,12 +473,12 @@
 /* Begin PBXTargetDependency section */
 		ED1AFD431E942B2500FD4B90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ED1AFD2C1E942B2500FD4B90 /* Twitter */;
+			target = ED1AFD2C1E942B2500FD4B90 /* twitter_alamofire_demo */;
 			targetProxy = ED1AFD421E942B2500FD4B90 /* PBXContainerItemProxy */;
 		};
 		ED1AFD4E1E942B2500FD4B90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ED1AFD2C1E942B2500FD4B90 /* Twitter */;
+			target = ED1AFD2C1E942B2500FD4B90 /* twitter_alamofire_demo */;
 			targetProxy = ED1AFD4D1E942B2500FD4B90 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -654,7 +656,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.twitter-alamofire-demoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twitter.app/Twitter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/twitter_alamofire_demo.app/twitter_alamofire_demo";
 			};
 			name = Debug;
 		};
@@ -670,7 +672,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codepath.twitter-alamofire-demoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twitter.app/Twitter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/twitter_alamofire_demo.app/twitter_alamofire_demo";
 			};
 			name = Release;
 		};
@@ -707,7 +709,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED1AFD281E942B2500FD4B90 /* Build configuration list for PBXProject "Twitter" */ = {
+		ED1AFD281E942B2500FD4B90 /* Build configuration list for PBXProject "twitter_alamofire_demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED1AFD531E942B2500FD4B90 /* Debug */,
@@ -716,7 +718,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED1AFD551E942B2500FD4B90 /* Build configuration list for PBXNativeTarget "Twitter" */ = {
+		ED1AFD551E942B2500FD4B90 /* Build configuration list for PBXNativeTarget "twitter_alamofire_demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED1AFD561E942B2500FD4B90 /* Debug */,
@@ -725,7 +727,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED1AFD581E942B2500FD4B90 /* Build configuration list for PBXNativeTarget "TwitterTests" */ = {
+		ED1AFD581E942B2500FD4B90 /* Build configuration list for PBXNativeTarget "twitter_alamofire_demoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED1AFD591E942B2500FD4B90 /* Debug */,
@@ -734,7 +736,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED1AFD5B1E942B2500FD4B90 /* Build configuration list for PBXNativeTarget "TwitterUITests" */ = {
+		ED1AFD5B1E942B2500FD4B90 /* Build configuration list for PBXNativeTarget "twitter_alamofire_demoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED1AFD5C1E942B2500FD4B90 /* Debug */,

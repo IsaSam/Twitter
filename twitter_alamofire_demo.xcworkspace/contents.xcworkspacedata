@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/isaacsamuel/OneDrive/Documents/iOsApp/TwitterApp/Twitter.xcodeproj">
+      location = "group:/Users/isaacsamuel/OneDrive/Documents/iOsApp/TwitterApp/twitter_alamofire_demo.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:twitter_alamofire_demo.xcodeproj">
    </FileRef>
 </Workspace>

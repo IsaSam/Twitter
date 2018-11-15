@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Alamofire
+import OAuthSwift
+import OAuthSwiftAlamofire
+import KeychainAccess
 
 class User: NSObject {
     
@@ -14,6 +18,7 @@ class User: NSObject {
     
     var name: String?
     var screenName: String?
+    var profileUrl: NSURL?
     //static var current: User?
     // For user persistance
     var dictionary: [String: Any]?
@@ -46,6 +51,10 @@ class User: NSObject {
         self.dictionary = dictionary
         name = dictionary["name"] as? String
         screenName = dictionary["screen_name"] as? String
+        let profileUrlString = dictionary["profile_image_url_https"] as? String
+        if let profileUrlString = profileUrlString {
+            profileUrl = NSURL(string: profileUrlString)
+        }
     }
 
     

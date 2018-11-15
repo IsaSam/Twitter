@@ -11,7 +11,8 @@ import Alamofire
 import KeychainAccess
 import OAuthSwiftAlamofire
 import OAuthSwift
-///import AlamofireImage
+import AlamofireImage
+
 
 class TweetCell: UITableViewCell {
     
@@ -29,7 +30,7 @@ class TweetCell: UITableViewCell {
             tweetTextLabel.text = tweet.text
             profileNameLabel.text = tweet.user?.name
             usernameLabel.text = tweet.user?.screenName
-            
+            profileImageView.af_setImage(withURL: tweet.user?.profileUrl! as! URL)
             
         }
         
