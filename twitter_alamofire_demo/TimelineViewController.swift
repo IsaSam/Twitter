@@ -12,7 +12,6 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     var tweets: [Tweet] = []
-    
     var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
