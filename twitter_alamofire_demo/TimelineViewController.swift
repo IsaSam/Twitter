@@ -13,14 +13,27 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     var tweets: [Tweet] = []
     
+    var refreshControl: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: #selector(TimelineViewController.didPullToRefresh(_:)), for: .valueChanged)
 
         tableView.dataSource = self
         tableView.rowHeight = 180
         tableView.estimatedRowHeight = 200
+        
+        tableView.insertSubview(refreshControl, at: 0)
+        
         fetchTweets()
     }
+    
+    @objc func didPullToRefresh(_ refreshControl: UIRefreshControl){
+        fetchTweets()
+    }
+    
     @IBAction func onLogoutButton(_ sender: Any) {
         // Copy this line once you've made the outlet
         APIManager.shared.logout()
@@ -47,6 +60,7 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
             else {
                 self.tweets = tweets!
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
         }
     }
