@@ -21,7 +21,9 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var timestampLabel: UILabel!
-    
+    @IBOutlet weak var replyButton: UIImageView!
+    @IBOutlet weak var retweetButton: UIImageView!
+    @IBOutlet weak var favoriteButton: UIImageView!
     
     var profileUrl: NSURL?
     private var TimelineViewController: UIViewController!
@@ -32,6 +34,10 @@ class TweetCell: UITableViewCell {
             usernameLabel.text = "@" + (tweet.user?.screenName as! String)
             profileImageView.af_setImage(withURL: tweet.user?.profileUrl! as! URL)
             timestampLabel.text = tweet.timeElapsed()
+            
+            selectionStyle = .none
+            profileImageView.layer.cornerRadius = 35
+            profileImageView.clipsToBounds = true
             
         }
         
