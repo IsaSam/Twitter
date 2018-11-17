@@ -13,9 +13,9 @@ class Tweet: NSObject {
     // MARK: Properties
     var id: Int? // For favoriting, retweeting & replying
     var text: String? // Text content of tweet
-    var favoriteCount: Int? // Update favorite count label
+    var favoriteCount: Int = 0 // Update favorite count label
     var favorited: Bool? // Configure favorite button
-    var retweetCount: Int? // Update favorite count label
+    var retweetCount: Int = 0  // Update favorite count label
     var retweeted: Bool? // Configure retweet button
     var user: User? // Author of the Tweet
     var createDate: NSDate?
@@ -43,9 +43,9 @@ class Tweet: NSObject {
         //id = dictionary["id"] as! Int64
         id = (dictionary["id"] as? Int) ?? 0
         text = dictionary["text"] as? String
-        favoriteCount = dictionary["favorite_count"] as? Int
+        favoriteCount = (dictionary["favorite_count"] as? Int)!
         favorited = dictionary["favorited"] as? Bool
-        retweetCount = dictionary["retweet_count"] as? Int
+        retweetCount = (dictionary["retweet_count"] as? Int)!
         retweeted = dictionary["retweeted"] as? Bool
         // TODO: initialize user
         // TODO: Format and set createdAtString

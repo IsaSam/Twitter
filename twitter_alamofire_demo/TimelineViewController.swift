@@ -22,7 +22,7 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
 
         tableView.dataSource = self
         tableView.rowHeight = 180
-        tableView.estimatedRowHeight = 200
+        tableView.estimatedRowHeight = 180
         
         tableView.insertSubview(refreshControl, at: 0)
         

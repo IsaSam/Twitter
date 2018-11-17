@@ -22,26 +22,65 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var timestampLabel: UILabel!
     @IBOutlet weak var replyButton: UIImageView!
-    @IBOutlet weak var retweetButton: UIImageView!
+    @IBOutlet weak var retweetButton: UIButton!
+    @IBOutlet weak var countRetweetLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIImageView!
+    @IBOutlet weak var countFavoriteLabel: UILabel!
     
     var profileUrl: NSURL?
     private var TimelineViewController: UIViewController!
     var tweet: Tweet! {
         didSet{
-            tweetTextLabel.text = tweet.text
-            profileNameLabel.text = tweet.user?.name
-            usernameLabel.text = "@" + (tweet.user?.screenName as! String)
-            profileImageView.af_setImage(withURL: tweet.user?.profileUrl! as! URL)
-            timestampLabel.text = tweet.timeElapsed()
-            
-            selectionStyle = .none
-            profileImageView.layer.cornerRadius = 35
-            profileImageView.clipsToBounds = true
-            
+            refreshTweetData()
         }
         
     }
+    func refreshTweetData(){
+        tweetTextLabel.text = tweet.text
+        profileNameLabel.text = tweet.user?.name
+        usernameLabel.text = "@" + (tweet.user?.screenName as! String)
+        profileImageView.af_setImage(withURL: tweet.user?.profileUrl! as! URL)
+        timestampLabel.text = tweet.timeElapsed()
+        countRetweetLabel.text = String(tweet.retweetCount)
+        countFavoriteLabel.text = String(tweet.favoriteCount)
+        
+        profileImageView.layer.cornerRadius = 35
+        profileImageView.clipsToBounds = true
+        selectionStyle = .none
+    }
+    
+   /* @IBAction func onTapRetweet(_ sender: Any) {
+        if(tweet.retweeted!) {
+            // TODO: Update the local tweet model
+            tweet.retweeted = false
+            tweet.retweetCount -= 1
+            // TODO: Update cell UI
+            refreshTweetData()
+            // TODO: Send a POST request to the POST favorites/create endpoint
+            APIManager.shared.unretweet(tweet) { (tweet: Tweet?, error: Error?) in
+                if let error = error {
+                    print("Error unretweeting tweet: \(error.localizedDescription)")
+                } else if let tweet = tweet {
+                    print("Tweet unretweeted succesfully: \(tweet.text!)")
+                }
+            }
+        } else {
+            // TODO: Update the local tweet model
+            tweet.retweeted = true
+            tweet.retweetCount += 1
+            // TODO: Update cell UI
+            refreshData()
+            // TODO: Send a POST request to the POST favorites/create endpoint
+            APIManager.shared.retweet(tweet) { (tweet: Tweet?, error: Error?) in
+                if let error = error {
+                    print("Error retweeting tweet: \(error.localizedDescription)")
+                } else if let tweet = tweet {
+                    print("Tweet retweeted succesfully: \(tweet.text!)")
+                }
+            }
+        }
+    }*/
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
