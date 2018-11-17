@@ -70,20 +70,6 @@ class Tweet: NSObject {
         } else {
             return String(time / 60) + "m"
         }
-       /*
-        // Format createdAt date string
-        let createdAtOriginalString = dictionary["created_at"] as! String
-        let formatter = DateFormatter()
-        // Configure the input format to parse the date string
-        formatter.dateFormat = "E MMM d HH:mm:ss Z y"
-        // Convert String to Date
-        let date = formatter.date(from: createdAtOriginalString)!
-        // Configure output format
-        formatter.dateStyle = .short
-        formatter.timeStyle = .none
-        // Convert Date to String and set the createdAtString property
-        createdAtString = formatter.string(from: date)
-         */
     }
     
     static func tweets(with array: [[String: Any]]) -> [Tweet] {
