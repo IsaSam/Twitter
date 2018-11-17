@@ -26,6 +26,9 @@ The following **stretch** features are implemented:
 - [ ] User can load more tweets once they reach the bottom of the feed using infinite loading similar to the actual Twitter client. (2pts)
 
 The following **additional** features are implemented:
+- [X] Progress Activity Loading when login
+- [X] Confirmation when log out of session
+- [X] Label color change when user tap the retweet and favorite buttons
 
 - [ ] List anything else that you can get done to improve the app functionality!
 
@@ -38,7 +41,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='twitterVideo_1.gif' title='Twitter Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
