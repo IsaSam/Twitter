@@ -24,7 +24,7 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var replyButton: UIImageView!
     @IBOutlet weak var retweetButton: UIButton!
     @IBOutlet weak var countRetweetLabel: UILabel!
-    @IBOutlet weak var favoriteButton: UIImageView!
+    @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var countFavoriteLabel: UILabel!
     
     var profileUrl: NSURL?
@@ -47,9 +47,22 @@ class TweetCell: UITableViewCell {
         profileImageView.layer.cornerRadius = 35
         profileImageView.clipsToBounds = true
         selectionStyle = .none
+        
+        if(tweet.retweeted!) {
+            retweetButton.setImage(#imageLiteral(resourceName:"retweet-icon-green"), for: .normal)
+        } else {
+            retweetButton.setImage(#imageLiteral(resourceName:"retweet-icon"), for: .normal)
+        }
+        
+        if(tweet.favorited!) {
+            favoriteButton.setImage(#imageLiteral(resourceName: "favor-icon-red"), for: .normal)
+        } else {
+            favoriteButton.setImage(#imageLiteral(resourceName: "favor-icon"), for: .normal)
+        }
+
     }
     
-   /* @IBAction func onTapRetweet(_ sender: Any) {
+    @IBAction func onTapRetweet(_ sender: Any) {
         if(tweet.retweeted!) {
             // TODO: Update the local tweet model
             tweet.retweeted = false
@@ -57,6 +70,7 @@ class TweetCell: UITableViewCell {
             // TODO: Update cell UI
             refreshTweetData()
             // TODO: Send a POST request to the POST favorites/create endpoint
+            
             APIManager.shared.unretweet(tweet) { (tweet: Tweet?, error: Error?) in
                 if let error = error {
                     print("Error unretweeting tweet: \(error.localizedDescription)")
@@ -69,7 +83,8 @@ class TweetCell: UITableViewCell {
             tweet.retweeted = true
             tweet.retweetCount += 1
             // TODO: Update cell UI
-            refreshData()
+            refreshTweetData()
+            
             // TODO: Send a POST request to the POST favorites/create endpoint
             APIManager.shared.retweet(tweet) { (tweet: Tweet?, error: Error?) in
                 if let error = error {
@@ -79,8 +94,39 @@ class TweetCell: UITableViewCell {
                 }
             }
         }
-    }*/
+    }
     
+    @IBAction func onTapFavorite(_ sender: Any) {
+        if(tweet.favorited!) {
+            // TODO: Update the local tweet model
+            tweet.favorited = false
+            tweet.favoriteCount -= 1
+            // TODO: Update cell UI
+            refreshTweetData()
+            // TODO: Send a POST request to the POST favorites/create endpoint
+            APIManager.shared.unfavorite(tweet) { (tweet: Tweet?, error: Error?) in
+                if let error = error {
+                    print("Error unfavoriting tweet: \(error.localizedDescription)")
+                } else if let tweet = tweet {
+                    print("Tweet unfavorited succesfully: \(tweet.text!)")
+                }
+            }
+        } else {
+            // TODO: Update the local tweet model
+            tweet.favorited = true
+            tweet.favoriteCount += 1
+            // TODO: Update cell UI
+            refreshTweetData()
+            // TODO: Send a POST request to the POST favorites/create endpoint
+            APIManager.shared.favorite(tweet) { (tweet: Tweet?, error: Error?) in
+                if let error = error {
+                    print("Error favoriting tweet: \(error.localizedDescription)")
+                } else if let tweet = tweet {
+                    print("Tweet favorited succesfully: \(tweet.text!)")
+                }
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
