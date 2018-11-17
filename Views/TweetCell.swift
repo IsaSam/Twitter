@@ -43,21 +43,26 @@ class TweetCell: UITableViewCell {
         timestampLabel.text = tweet.timeElapsed()
         countRetweetLabel.text = String(tweet.retweetCount)
         countFavoriteLabel.text = String(tweet.favoriteCount)
-        
         profileImageView.layer.cornerRadius = 35
         profileImageView.clipsToBounds = true
+
+        usernameLabel.textColor = UIColor(red:0.11, green:0.63, blue:0.95, alpha:0.8)
         selectionStyle = .none
         
         if(tweet.retweeted!) {
             retweetButton.setImage(#imageLiteral(resourceName:"retweet-icon-green"), for: .normal)
+            countRetweetLabel.textColor = UIColor(red:1.00, green:0.00, blue:0.29, alpha:1.0)
         } else {
             retweetButton.setImage(#imageLiteral(resourceName:"retweet-icon"), for: .normal)
+            countRetweetLabel.textColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.5)
         }
         
         if(tweet.favorited!) {
             favoriteButton.setImage(#imageLiteral(resourceName: "favor-icon-red"), for: .normal)
+            countFavoriteLabel.textColor = UIColor(red:1.00, green:0.00, blue:0.29, alpha:1.0)
         } else {
             favoriteButton.setImage(#imageLiteral(resourceName: "favor-icon"), for: .normal)
+            countFavoriteLabel.textColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.5)
         }
 
     }

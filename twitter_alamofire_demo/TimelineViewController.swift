@@ -17,6 +17,10 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let nav = self.navigationController?.navigationBar
+        nav!.barTintColor = UIColor(red:0.11, green:0.63, blue:0.95, alpha:1.0)
+        nav!.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
         self.refreshControl = UIRefreshControl()
         self.refreshControl.addTarget(self, action: #selector(TimelineViewController.didPullToRefresh(_:)), for: .valueChanged)
 
