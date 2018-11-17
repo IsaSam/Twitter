@@ -12,14 +12,18 @@ import OAuthSwift
 import OAuthSwiftAlamofire
 import KeychainAccess
 
+
 class APIManager: SessionManager {
     
+    
+    
     // MARK: TODO: Add App Keys
+    
     static let consumerKey = "uFTmFW66AAMEUwx3rZlZDMSCf"
     static let consumerSecret = "LtlxIoQpBvHcqjpSMIA9Gs2E9wCJbr7xkx9EpSdBYoNedaZUgh"
 
     static let requestTokenURL = "https://api.twitter.com/oauth/request_token"
-    static let authorizeURL = "https://api.twitter.com/oauth/authorize"
+    static var authorizeURL = "https://api.twitter.com/oauth/authorize"
     static let accessTokenURL = "https://api.twitter.com/oauth/access_token"
     
     static let callbackURLString = "alamoTwitter://"
@@ -187,6 +191,8 @@ class APIManager: SessionManager {
         User.current = nil
         
         // TODO: 2. Deauthorize OAuth tokens
+        //APIManager.shared.requestSerializer.removeAccessToken()
+        APIManager.authorizeURL.removeAll()
         
         // 3. Post logout notification
         NotificationCenter.default.post(name: NSNotification.Name("didLogout"), object: nil)

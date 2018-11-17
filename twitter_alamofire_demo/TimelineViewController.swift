@@ -38,8 +38,17 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func onLogoutButton(_ sender: Any) {
-        // Copy this line once you've made the outlet
-        APIManager.shared.logout()
+        
+        //print("Log Out Successfully")
+        let actionSheet = UIAlertController(title: "Closing Session", message: "Are you sure you want to log Out?", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Disconnect Session", style: .default, handler: {(UIAlertAction) in
+            APIManager.shared.logout()
+            //NotificationCenter.default.post(name: NSNotification.Name("didLogout"), object: nil)
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(actionSheet, animated: true, completion: nil)
+        
+        
         
     }
     

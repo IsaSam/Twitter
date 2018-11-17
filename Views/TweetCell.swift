@@ -51,7 +51,7 @@ class TweetCell: UITableViewCell {
         
         if(tweet.retweeted!) {
             retweetButton.setImage(#imageLiteral(resourceName:"retweet-icon-green"), for: .normal)
-            countRetweetLabel.textColor = UIColor(red:1.00, green:0.00, blue:0.29, alpha:1.0)
+            countRetweetLabel.textColor = UIColor(red:0.17, green:0.81, blue:0.05, alpha:1.0)
         } else {
             retweetButton.setImage(#imageLiteral(resourceName:"retweet-icon"), for: .normal)
             countRetweetLabel.textColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.5)

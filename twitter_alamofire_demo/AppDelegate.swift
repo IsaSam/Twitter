@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (User.current != nil) {
             let homeTimelineViewController = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
             self.window?.rootViewController = homeTimelineViewController
-        }else{
+        }
         
         // If user is not logged in, go to login screen
         NotificationCenter.default.addObserver(forName: Notification.Name("didLogout"), object: nil, queue: OperationQueue.main) { (Notification) in
@@ -31,8 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
             self.window?.rootViewController = loginViewController
-            
-        }
+          
         }
         
         return true
